@@ -214,6 +214,10 @@ div.block_subscribe:hover::before {
   left: 0;
   right: 0;
   margin: 0 auto;
+  background-image: url(images/glow_1_dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -4;
 }
 
 .background_tittle_main_wrapper {
@@ -221,7 +225,7 @@ div.block_subscribe:hover::before {
   position: relative;
 }
 
-.background_tittle_main_1 {
+/* .background_tittle_main_1 {
   position: absolute;
   width: 1096.45px;
   height: 865.4px;
@@ -253,14 +257,14 @@ div.block_subscribe:hover::before {
   background: #020105;
   transform: rotate(-60deg);
   filter: blur(300px);
-}
-
+} */
 .background_tittle_main_light {
   display: none;
 }
 
 body.main_light .background_tittle_main {
-  display: none;
+  background-image: url(images/glow_1_light.jpg);
+  height: 1648px;
 }
 
 body.main_light .background_tittle_main_light {
@@ -351,7 +355,7 @@ body.main_light .background_tittle_main_light {
   top: 2px;
 }
 
-.images_tittle_shadow {
+/* .images_tittle_shadow {
   background-image: url(images/illustration_shadow.png);
   position: absolute;
   width: 1528px;
@@ -364,8 +368,7 @@ body.main_light .background_tittle_main_light {
   content: "";
   background-position: center;
   background-size: contain;
-}
-
+} */
 .content_light_theme .images_tittle_shadow {
   display: none;
 }
@@ -375,7 +378,7 @@ body.main_light .background_tittle_main_light {
 }
 
 body.main_light .images_tittle_shadow_light {
-  background-image: url(images/illustration_shadow_light.png);
+  background-image: url(images/illustration_shadow_light.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -386,35 +389,36 @@ body.main_light .images_tittle_shadow_light {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: -5;
+  z-index: -4;
 }
 
 .images_tittle_background::after {
   background-image: url(images/illustration_assets.png);
   position: absolute;
-  left: -122px;
+  left: -116px;
   right: 0;
   z-index: 2;
   content: "";
   width: 1528px;
-  height: 738px;
+  height: 740px;
   background-repeat: no-repeat;
   background-size: contain;
-  top: 2px;
+  top: 0px;
 }
 
 .content_light_theme .images_tittle_background::after {
   background-image: url(images/illustration_assets_light.png);
   position: absolute;
-  left: -122px;
+  left: -120px;
   right: 0;
   z-index: 2;
   content: "";
   width: 1528px;
-  height: 738px;
+  height: 740px;
   background-repeat: no-repeat;
   background-size: contain;
-  top: 2px;
+  background-position: center;
+  top: 0px;
 }
 
 .images_tittle_background::before {
@@ -810,7 +814,7 @@ ul.list_text li::before {
 .subscribe_block_illustr {
   display: block;
   content: "";
-  background-image: url(images/glow_footer.svg);
+  background-image: url(images/glow_footer.jpg);
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -824,7 +828,7 @@ ul.list_text li::before {
 }
 
 .main_light .subscribe_block_illustr {
-  background-image: url(images/glow_footer_light.svg);
+  background-image: url(images/glow_footer_light.jpg);
 }
 
 .subscribe_text_button {
@@ -1094,7 +1098,8 @@ ul.list_text li::before {
 
 .flex_block_image_6 .lines_bottom {
   background-image: url(images/img_block_6/lines_bottom.svg);
-z-index: 3;}
+  z-index: 3;
+}
 
 .main_light .flex_block_image_6 .img_shadow_light {
   background-image: url(images/img_block_6/img_shadow_light.png);
@@ -1216,9 +1221,10 @@ z-index: 3;}
   left: 0;
   right: 0;
   margin: 0 auto;
+  background-image: url(images/glow_2_light.jpg);
 }
 
-.glow_2_light_ellipse_1 {
+/* .glow_2_light_ellipse_1 {
   width: 650px;
   height: 650px;
   border-radius: 50%;
@@ -1248,8 +1254,7 @@ z-index: 3;}
   -moz-filter: blur(5px);
   filter: blur(900px);
   -webkit-filter: blur(900px);
-}
-
+} */
 .popup_language {
   display: none;
 }
