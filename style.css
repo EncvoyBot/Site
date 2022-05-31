@@ -1425,4 +1425,24 @@ background-repeat: no-repeat;background-position: center;}
   body.main_light .images_tittle_shadow_light {
     display: none;
   }
+
+  .background_tittle_main {
+    background-image: url(images/glow_1_dark_mobile.jpg);
+  }
+
+  .subscribe_block_illustr {
+    background-image: url(images/glow_footer_mobile.jpg);
+  }
+
+  body.main_light .background_tittle_main {
+    background-image: url(images/glow_1_light_mobile.jpg);
+  }
+
+  .main_light .subscribe_block_illustr {
+    background-image: url(images/glow_footer_light_mobile.jpg);
+  }
+
+  .main_light .glow_2_light {
+    background-image: url(images/glow_2_light_mobile.jpg);    
+  }
 }
