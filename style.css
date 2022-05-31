@@ -608,7 +608,7 @@ ul.list_text li::before {
 }
 
 .image_glow_1 {
-  background-image: url(images/img_block_1/glow_dark.svg);
+  background-image: url(images/img_block_1/glow_dark.png);
 }
 
 /* 2 image */
@@ -633,7 +633,7 @@ ul.list_text li::before {
 }
 
 .image_glow_2 {
-  background-image: url(images/img_block_2/glow_dark.svg);
+  background-image: url(images/img_block_2/glow_dark.png);
 }
 
 /* 3 image */
@@ -658,7 +658,7 @@ ul.list_text li::before {
 }
 
 .image_glow_3 {
-  background-image: url(images/img_block_3/glow_dark.svg);
+  background-image: url(images/img_block_3/glow_dark.png);
 }
 
 /* 4 image */
@@ -683,7 +683,7 @@ ul.list_text li::before {
 }
 
 .image_glow_4 {
-  background-image: url(images/img_block_4/glow_dark.svg);
+  background-image: url(images/img_block_4/glow_dark.png);
 }
 
 /* 5 image */
@@ -708,7 +708,7 @@ ul.list_text li::before {
 }
 
 .image_glow_5 {
-  background-image: url(images/img_block_5/glow_dark.svg);
+  background-image: url(images/img_block_5/glow_dark.png);
 }
 
 /* 6 image */
@@ -733,7 +733,7 @@ ul.list_text li::before {
 }
 
 .image_glow_6 {
-  background-image: url(images/img_block_6/glow_dark.svg);
+  background-image: url(images/img_block_6/glow_dark.png);
 }
 
 /* 7 image */
@@ -758,7 +758,7 @@ ul.list_text li::before {
 }
 
 .image_glow_7 {
-  background-image: url(images/img_block_7/glow_dark.svg);
+  background-image: url(images/img_block_7/glow_dark.png);
 }
 
 .subscribe_text {
