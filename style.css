@@ -1214,10 +1214,10 @@ ul.list_text li::before {
 
 .main_light .glow_2_light {
   display: block;
-  width: 2400px;
-  height: 3588px;
+  width: 100%;
+  height: 3148px;
   position: absolute;
-  top: 1208px;
+  top: 1648px;
   left: 0;
   right: 0;
   margin: 0 auto;
