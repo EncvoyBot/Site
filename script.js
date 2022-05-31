@@ -1,3 +1,19 @@
+$(document).ready(function(){
+
+  var userLang = navigator.language || navigator.userLanguage;
+
+  if( userLang == "es-ES"){
+     changeLagnuage(es);
+      $(".select_language").attr('lang', "En");
+      $(".select_language").attr('language', "Español");
+      $(".change_language").html("Es");
+      $(".select_language").html("English");
+  }
+  else{
+    changeLagnuage(en);
+  }
+});
+
 $(document).on("click", ".border_theme", function() {
 
   $(this).toggleClass("border_theme_light");
@@ -23,13 +39,27 @@ $(document).on("click", ".border_theme", function() {
   }
 });
 
+function changeLagnuage(lang){
+  let language = eval(lang);
+  document.querySelectorAll('[text]').forEach(el => {
+    el.innerHTML = language[el.getAttribute('text')];
+  })
+}
+
+$(document).on("click", ".select_language", function() {
+
+  var lang = $(this).attr("lang");
+  var language = $(".change_language").html();
+
+  $(this).attr('lang', language);
+  $(".change_language").html(lang);
+
+  changelang = lang.toLowerCase();
+  changeLagnuage(changelang);
+});
 
 $(document).on("click", ".select_cookie", function() {
   $(".popup_cookie").fadeOut();
-});
-
-$(document).on("click", ".change_language", function() {
-
 });
 
 // Animations
