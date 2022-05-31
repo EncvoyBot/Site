@@ -105,16 +105,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       delay: 0.8
     });
 
-    gsap.fromTo(".images_tittle_logo", {
-      autoAlpha: 0,
-      y: 40
-    }, {
-      autoAlpha: 1,
-      y: 0,
-      duration: 1,
-      delay: 0.8
-    });
-
     gsap.fromTo(".images_tittle", {
       autoAlpha: 0,
       y: 40
