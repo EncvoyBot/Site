@@ -1065,7 +1065,8 @@ ul.list_text li::before {
 /* end cart */
 .popup_cookie {
   width: 1280px;
-  box-sizing: border-box;padding: 40px 60px;
+  box-sizing: border-box;
+  padding: 40px 60px;
   background: var(--black-hover);
   border-radius: 10px;
   position: fixed;

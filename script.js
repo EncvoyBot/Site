@@ -58,9 +58,50 @@ $(document).on("click", ".select_language", function() {
   changeLagnuage(changelang);
 });
 
-$(document).on("click", ".select_cookie", function() {
-  $(".popup_cookie").fadeOut();
-});
+// cookies
+
+function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+
+    function checkCookies() {
+        let cookieNote = document.querySelector('.popup_cookie');
+        let cookieBtnAccept = cookieNote.querySelector('.cookie_accept');
+
+        if (!getCookie('cookies_policy')) {
+            gsap.fromTo(cookieNote, {
+              autoAlpha: 0
+            }, {
+              autoAlpha: 1,
+              duration: 0.2,
+              delay: 2
+            });
+        }
+
+        cookieBtnAccept.addEventListener('click', function () {
+            setCookie('cookies_policy', 'true', 365);
+            gsap.fromTo(cookieNote, {
+              autoAlpha: 1
+            }, {
+              autoAlpha: 0,
+              duration: 0.2,
+            });
+        });
+    }
+
+    checkCookies();
 
 // Animations
 
@@ -69,14 +110,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   window.onload = function() {
 
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.fromTo(".popup_cookie", {
-      autoAlpha: 0
-    }, {
-      autoAlpha: 1,
-      duration: 0.5,
-      delay: 1
-    });
 
     gsap.fromTo(".background_tittle_main", {
       y: -120,
