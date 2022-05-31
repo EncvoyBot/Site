@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: ".subscribe_block",
         start: "30% 80%",
-        end: "+=300",
+        end: "+=200",
         scrub: 1,
       }
     });
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: ".subscribe_block",
         start: "30% 80%",
-        end: "+=300",
+        end: "+=200",
         scrub: 1,
       }
     });
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: ".subscribe_block",
         start: "30% 80%",
-        end: "+=300",
+        end: "+=200",
         scrub: 1,
       }
     });
