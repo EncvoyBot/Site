@@ -1222,7 +1222,7 @@ ul.list_text li::before {
   right: 0;
   margin: 0 auto;
   background-image: url(images/glow_2_light.jpg);
-}
+background-repeat: no-repeat;background-position: center;}
 
 /* .glow_2_light_ellipse_1 {
   width: 650px;
