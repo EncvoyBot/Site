@@ -86,7 +86,7 @@ function setCookie(name, value, days) {
             }, {
               autoAlpha: 1,
               duration: 0.2,
-              delay: 2
+              delay: 3
             });
         }
 
