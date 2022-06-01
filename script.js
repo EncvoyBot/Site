@@ -111,43 +111,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(".background_tittle_main", {
-      y: -120,
-      autoAlpha: 0
-    }, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 1,
-      delay: 1
-    });
-
-    gsap.fromTo(document.querySelector(".tittle_h1").querySelector("h1"), {
-      y: 80,
-      autoAlpha: 0
-    }, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 0.8
-    });
-
-    gsap.fromTo(".tittle_fadeIn", {
-      autoAlpha: 0
-    }, {
-      autoAlpha: 1,
-      duration: 1,
-      delay: 0.8
-    });
-
-    gsap.fromTo(".images_tittle", {
-      autoAlpha: 0,
-      y: 40
-    }, {
-      autoAlpha: 1,
-      y: 0,
-      duration: 1,
-      delay: 0.8
-    });
-
     const blocks = gsap.utils.toArray(".flex_section");
     blocks.forEach(block => {
 
