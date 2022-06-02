@@ -1,26 +1,9 @@
-$(document).ready(function(){
-
-  var userLang = navigator.language || navigator.userLanguage;
-
-  if( userLang == "es-ES"){
-     changeLagnuage(es);
-      $(".select_language").attr('lang', "En");
-      $(".select_language").attr('language', "Español");
-      $(".change_language").html("Es");
-      $(".select_language").html("English");
-  }
-  else{
-    changeLagnuage(en);
-  }
-});
-
 $(document).on("click", ".border_theme", function() {
 
   $(this).toggleClass("border_theme_light");
   $(".body_content").toggleClass("content_light_theme");
   $(".logo_img").toggleClass("logo_light");
   $("body").toggleClass("main_light");
-
 
   var root = document.querySelector(':root');
 
@@ -39,69 +22,50 @@ $(document).on("click", ".border_theme", function() {
   }
 });
 
-function changeLagnuage(lang){
-  let language = eval(lang);
-  document.querySelectorAll('[text]').forEach(el => {
-    el.innerHTML = language[el.getAttribute('text')];
-  })
-}
-
-$(document).on("click", ".select_language", function() {
-
-  var lang = $(this).attr("lang");
-  var language = $(".change_language").html();
-
-  $(this).attr('lang', language);
-  $(".change_language").html(lang);
-
-  changelang = lang.toLowerCase();
-  changeLagnuage(changelang);
-});
-
 // cookies
 
-function setCookie(name, value, days) {
-        let expires = "";
-        if (days) {
-            let date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
+function setCookie(lang, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    function getCookie(name) {
-        let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 
 
-    function checkCookies() {
-        let cookieNote = document.querySelector('.popup_cookie');
-        let cookieBtnAccept = cookieNote.querySelector('.cookie_accept');
+function checkCookies() {
+  let cookieNote = document.querySelector('.popup_cookie');
+  let cookieBtnAccept = cookieNote.querySelector('.cookie_accept');
 
-        if (!getCookie('cookies_policy')) {
-            gsap.fromTo(cookieNote, {
-              autoAlpha: 0
-            }, {
-              autoAlpha: 1,
-              duration: 0.2,
-              delay: 3
-            });
-        }
+  if (!getCookie('cookies_policy')) {
+    gsap.fromTo(cookieNote, {
+      autoAlpha: 0
+    }, {
+      autoAlpha: 1,
+      duration: 0.2,
+      delay: 3
+    });
+  }
 
-        cookieBtnAccept.addEventListener('click', function () {
-            setCookie('cookies_policy', 'true', 365);
-            gsap.fromTo(cookieNote, {
-              autoAlpha: 1
-            }, {
-              autoAlpha: 0,
-              duration: 0.2,
-            });
-        });
-    }
+  cookieBtnAccept.addEventListener('click', function() {
+    setCookie('cookies_policy', 'true', 365);
+    gsap.fromTo(cookieNote, {
+      autoAlpha: 1
+    }, {
+      autoAlpha: 0,
+      duration: 0.2,
+    });
+  });
+}
 
-    checkCookies();
+checkCookies();
 
 // Animations
 

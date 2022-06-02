@@ -3,7 +3,7 @@
   --white: #FFFFFF;
   --white-opacity: rgba(255, 255, 255, 0.7);
   --black-hover: #0C0B0F;
-  --section: rgba(255, 255, 255, 0.04);
+  --section: #0C0B0F;
 }
 
 @font-face {
@@ -25,23 +25,47 @@
 }
 
 @keyframes slide-up-80 {
- from { transform: translateY(80px); }
- to { transform: translateY(0); }
+  from {
+    transform: translateY(80px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
- from { opacity: 0; }
- to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-down-120 {
- from { opacity: 0; transform: translateY(-120px); }
- to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-up-40 {
- from { opacity: 0; transform: translateY(40px); }
- to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tittle_h1 {
@@ -101,6 +125,20 @@ h1, h2, h3, h4, h5, h6 {
   font-display: optional;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .logo_img {
   background-image: url(images/logo.svg);
   width: 153px;
@@ -108,6 +146,9 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
 }
 
 .logo_img.logo_light {
@@ -139,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.language_head a {
+.language_head span, .language_head a {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -147,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 
 .popup_language a {
@@ -206,7 +248,7 @@ div.block_subscribe {
   will-change: opacity;
 }
 
-div.block_subscribe a {
+div.block_subscribe a, div.block_subscribe span {
   display: block;
   padding: 9px 0px;
   border-radius: 10px;
@@ -224,13 +266,14 @@ div.block_subscribe a {
   line-height: 32.5px;
   max-width: 234px;
   text-align: center;
+  cursor: pointer;
 }
 
-.main_light div.block_subscribe a {
+.main_light div.block_subscribe a, .main_light div.block_subscribe span {
   background-color: #fff;
 }
 
-div.block_subscribe:hover a {
+div.block_subscribe:hover a, div.block_subscribe:hover span {
   background-color: var(--black-hover);
 }
 
@@ -417,6 +460,7 @@ body.main_light .background_tittle_main_light {
   background: var(--section);
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .flex_block {
@@ -424,6 +468,8 @@ body.main_light .background_tittle_main_light {
   min-height: 440px;
   justify-content: space-between;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .flex_block_text {
@@ -504,26 +550,6 @@ ul.list_text li::before {
   background-size: contain;
 }
 
-.flex_block_img::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 412.91px;
-  height: 329.04px;
-  top: 55px;
-  left: 64.62px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.flex_block_img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .image_center {
   content: "";
   display: block;
@@ -544,7 +570,10 @@ ul.list_text li::before {
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
-  z-index: -1;
+}
+
+.content_light_theme .image_glow {
+  display: none;
 }
 
 .image_glow_right {
@@ -557,66 +586,38 @@ ul.list_text li::before {
 }
 
 /* 1 image */
-.no-webp .image_glow_1 {
-  background-image: url(images/img_block_1/glow_dark.png);
-}
-
-.webp .image_glow_1 {
-  background-image: url(images/img_block_1/glow_dark.webp);
+.image_glow_1 {
+  background-image: url(images/img_block_1/glow_dark.jpg);
 }
 
 /* 2 image */
-.no-webp .image_glow_2 {
-  background-image: url(images/img_block_2/glow_dark.png);
-}
-
-.webp .image_glow_2 {
-  background-image: url(images/img_block_2/glow_dark.webp);
+.image_glow_2 {
+  background-image: url(images/img_block_2/glow_dark.jpg);
 }
 
 /* 3 image */
-.no-webp .image_glow_3 {
-  background-image: url(images/img_block_3/glow_dark.png);
-}
-
-.webp .image_glow_3 {
-  background-image: url(images/img_block_3/glow_dark.webp);
+.image_glow_3 {
+  background-image: url(images/img_block_3/glow_dark.jpg);
 }
 
 /* 4 image */
-.no-webp .image_glow_4 {
-  background-image: url(images/img_block_4/glow_dark.png);
-}
-
-.webp .image_glow_4 {
-  background-image: url(images/img_block_4/glow_dark.webp);
+.image_glow_4 {
+  background-image: url(images/img_block_4/glow_dark.jpg);
 }
 
 /* 5 image */
-.no-webp  .image_glow_5 {
-  background-image: url(images/img_block_5/glow_dark.png);
-}
-
-.webp  .image_glow_5 {
-  background-image: url(images/img_block_5/glow_dark.webp);
+.image_glow_5 {
+  background-image: url(images/img_block_5/glow_dark.jpg);
 }
 
 /* 6 image */
-.no-webp .image_glow_6 {
-  background-image: url(images/img_block_6/glow_dark.png);
-}
-
-.webp .image_glow_6 {
-  background-image: url(images/img_block_6/glow_dark.webp);
+.image_glow_6 {
+  background-image: url(images/img_block_6/glow_dark.jpg);
 }
 
 /* 7 image */
-.no-webp .image_glow_7 {
-  background-image: url(images/img_block_7/glow_dark.png);
-}
-
-.webp .image_glow_7 {
-  background-image: url(images/img_block_7/glow_dark.webp);
+.image_glow_7 {
+  background-image: url(images/img_block_7/glow_dark.jpg);
 }
 
 .subscribe_text {
@@ -1106,7 +1107,7 @@ ul.list_text li::before {
   height: 46px;
 }
 
-.popup_cookie_flex .block_subscribe a {
+.popup_cookie_flex .block_subscribe span {
   width: auto;
   max-width: 109px;
   font-style: normal;
@@ -1314,11 +1315,11 @@ ul.list_text li::before {
     left: 0;
     right: 0;
     width: 100%;
-    background-position: top -90px right -90px;
+    background-position: top -90px right -130px;
   }
 
   .image_glow_left {
-    background-position: top -90px right -260px;
+    background-position: top -90px right -300px;
   }
 
   .popup_cookie {
